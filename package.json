@@ -1,0 +1,39 @@
+{
+  "name": "login-with-github",
+  "version": "0.0.0",
+  "description": "middleware making it easy to use github as authentication",
+  "main": "index.js",
+  "dependencies": {
+    "middler": "~0.7.0",
+    "request": "~2.22.0",
+    "href": "~0.1.1",
+    "idgen": "~1.3.0"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/carlos8f/login-with-github.git"
+  },
+  "homepage": "https://github.com/carlos8f/login-with-github",
+  "keywords": [
+    "login",
+    "github",
+    "oauth",
+    "oauth2",
+    "middleware",
+    "auth",
+    "sso"
+  ],
+  "author": "Carlos Rodriguez <carlos@s8f.org> (http://s8f.org/)",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "gitHead": "d698f5d97db8dd904acbb96b06f532dffa82ed6e",
+  "bugs": {
+    "url": "https://github.com/carlos8f/login-with-github/issues"
+  }
+}
