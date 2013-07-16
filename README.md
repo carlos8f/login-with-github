@@ -5,8 +5,17 @@ middleware making it easy to use github as authentication
 
 ## Usage
 
-Call `require('login-with-github')()` which returns a middleware handler
-suitable to use with express/connect or middler.
+Call `require('login-with-github')(options)` which returns a middleware handler
+suitable to use with express/connect or [middler](https://github.com/carlos8f/node-middler).
+
+The handler takes the parameters `req, res, next` and:
+
+- calls `next` with an `err` if the login attempt errored
+- OR calls `next` with no arguments
+    - `req.github_access_token` is available if the login succeeded, and also
+      `req.github_user` (if `options.fetch_user` is set)
+    - OR neither of those are available, if no login was attempted (`req.url`
+      didn't match `options.login_path`, for example)
 
 ## Requirements
 
