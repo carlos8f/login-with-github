@@ -10,7 +10,8 @@
     "idgen": "~1.3.0"
   },
   "devDependencies": {
-    "mocha": "*"
+    "mocha": "*",
+    "sess": "~0.1.1"
   },
   "scripts": {
     "test": "make test"

@@ -60,7 +60,8 @@ module.exports = function (_opts) {
       scope: options.scope,
       state: req.session.github_login_state
     });
-    res.redirect(uri);
+    res.writeHead(302, {'Location': uri});
+    res.end();
   }
 
   function processCode (req, res, next) {

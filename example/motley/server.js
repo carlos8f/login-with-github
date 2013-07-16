@@ -1,12 +1,11 @@
-var app = require('motley')
-  , loginWithGithub = require('../')
+var app = require('motley');
 
 app.boot(function (err) {
   if (err) throw err;
   app.motley();
 
   // here's where we pass options
-  var loginHandler = loginWithGithub(app.conf);
+  var loginHandler = require('../..')(app.conf);
 
   app.router
     .get('/', app.dish('<a href="/login/github">login with github</a>', {headers: {'Content-Type': 'text/html'}}))
