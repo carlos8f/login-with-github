@@ -9,7 +9,7 @@ app.boot(function (err) {
   var loginHandler = loginWithGithub(app.conf);
 
   app.router
-    .get('/', app.dish('<a href="/login/github">login with github</a>'))
+    .get('/', app.dish('<a href="/login/github">login with github</a>', {headers: {'Content-Type': 'text/html'}}))
     .get('/login/github', loginHandler, function (req, res, next) {
       res.json(req.github_user);
       // also req.github_access_token available

@@ -14,9 +14,6 @@ module.exports = function (_opts) {
   if (!options.client_id) throw new Error('options.client_id requried');
   if (!options.client_secret) throw new Error('options.client_secret required');
 
-  // this is the path we'll mount handlers on
-  options.login_path || (options.login_path = '/login/github');
-
   // github api endpoints
   options.authorize_url || (options.authorize_url = 'https://github.com/login/oauth/authorize');
   options.access_token_url || (options.access_token_url = 'https://github.com/login/oauth/access_token');
