@@ -1,0 +1,15 @@
+{
+  "name": "login-with-github-example",
+  "version": "0.0.0",
+  "description": "example of using login-with-github",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Carlos Rodriguez <carlos@s8f.org> (http://s8f.org/)",
+  "license": "MIT",
+  "dependencies": {
+    "motley": "~0.4.1"
+  }
+}
