@@ -1,6 +1,6 @@
 {
   "name": "login-with-github",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "middleware making it easy to use github as authentication",
   "main": "index.js",
   "dependencies": {
