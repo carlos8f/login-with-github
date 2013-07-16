@@ -69,7 +69,7 @@ module.exports = function (_opts) {
     if (!req.query.state) return next(new Error('state param required'));
     if (req.session.github_login_state !== req.query.state) return next(new Error('incorrect login state'));
 
-    req.session.github_login_state = null;
+    delete req.session.github_login_state;
     var uri = options.access_token_url + '?';
     var params = {
       client_id: options.client_id,
@@ -77,7 +77,7 @@ module.exports = function (_opts) {
       client_secret: options.client_secret,
       code: req.query.code
     };
-    req.session.github_redirect_uri = null;
+    delete req.session.github_redirect_uri;
     request({uri: uri, method: 'post', json: params}, function (err, resp, body) {
       if (err) return next(err);
       if (resp.statusCode !== 200) {
